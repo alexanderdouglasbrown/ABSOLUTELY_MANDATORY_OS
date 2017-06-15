@@ -38,7 +38,7 @@ function init_d() {
     CurrentUserSingleton.setInstance(OS.Users[0]);
     console.log(CurrentUserSingleton.getInstance());
     //CLI
-    CLI.oldInput = "<b>AMOS</b>\nFor help getting started, type 'help'\nType 'su' to elevate to a user with more permissions\n\n" + CurrentUserSingleton.getInstance().getUserName() + ": <b>/</b>> ";
+    CLI.oldInput = "<b>AMOS</b>\nFor help getting started, type 'help'\nType 'su' to elevate to a user with more permissions\n\t(Use Username: <b>admin</b>    Password: <b>amos</b>)\n\n" + CurrentUserSingleton.getInstance().getUserName() + ": <b>/</b>> ";
     CLI.commandHistory.push("");
     OS.FS.setPwd(Directory.Files);
     window.document.getElementById('container').innerHTML = CLI.oldInput + CLI.cursor;

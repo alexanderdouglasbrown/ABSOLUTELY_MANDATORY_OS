@@ -38,7 +38,7 @@ window.onload = function () {
 
 document.onkeypress = function (evt) {
     evt = evt || window.event;
-    if (evt.charCode == 13) { // On enter
+    if (evt.charCode == 13 || evt.which == 13) { // On enter
         if (evt.shiftKey && CLI.promptMode == false) { //If shift if held, insert a newline instead
             CLI.currentInput += "\n";
             CLI.render();
